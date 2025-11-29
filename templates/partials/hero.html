@@ -24,27 +24,52 @@
             </div>
         </div>
 
-        <form class="audit-form" id="audit-form">
-            <div class="form-group">
+        <form action="https://formspree.io/f/mkgldrpl" method="POST" class="audit-form" id="audit-form">
+            <input type="hidden" name="_subject" value="New Migration Analysis Request" />
+            <input type="hidden" name="_next" value="{{ site_url }}/thank-you/" />
+
+            <h3>Get a free migration analysis</h3>
+            <p class="form-subtitle">We'll analyze your site, show you what's slowing it down, and give you a custom quote to make it 7x faster.</p>
+
+            <div class="form-fields">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                    required
+                />
+
                 <input
                     type="url"
                     name="website_url"
-                    placeholder="Enter your website URL"
+                    placeholder="Your website URL (e.g., https://mysite.com)"
                     required
-                    class="url-input"
-                    autocomplete="url"
-                >
-                <button type="submit" class="cta-button">
-                    Get Free Speed Audit
-                </button>
+                />
+
+                <select name="build_tool" required>
+                    <option value="" disabled selected>What tool did you build with?</option>
+                    <option value="bolt">Bolt.new</option>
+                    <option value="lovable">Lovable</option>
+                    <option value="base44">Base44</option>
+                    <option value="v0">v0.dev</option>
+                    <option value="wix">Wix</option>
+                    <option value="squarespace">Squarespace</option>
+                    <option value="wordpress">WordPress</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit" class="cta-button">Get My Free Analysis →</button>
             </div>
-            <p class="form-hint">See exactly how slow your site is and how fast it could be</p>
+
+            <p class="form-note">
+                <span class="check">✓</span> No credit card required
+                <span class="check">✓</span> Delivered within 24 hours
+                <span class="check">✓</span> Includes migration quote
+            </p>
         </form>
 
-        <div class="trust-signals">
-            <span class="trust-item">No credit card required</span>
-            <span class="trust-item">Results in 30 seconds</span>
-            <span class="trust-item">500+ sites migrated</span>
-        </div>
+        <p class="self-test-note">
+            Want to check yourself first? <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">Run a free PageSpeed test</a>
+        </p>
     </div>
 </section>

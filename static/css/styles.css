@@ -346,9 +346,127 @@ a:hover {
 /* Audit Form */
 .audit-form {
     max-width: 500px;
-    margin: 0 auto var(--space-lg);
+    margin: 0 auto;
+    padding: var(--space-xl);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
+.audit-form h3 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.form-subtitle {
+    margin: 0 0 var(--space-lg) 0;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-fields input,
+.form-fields select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+    font-family: var(--font-sans);
+}
+
+.form-fields input:focus,
+.form-fields select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-fields select {
+    cursor: pointer;
+    background: var(--color-bg-alt);
+}
+
+.form-fields .cta-button {
+    width: 100%;
+}
+
+.form-note {
+    margin-top: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.form-note .check {
+    color: var(--color-good);
+    margin-right: var(--space-xs);
+}
+
+.self-test-note {
+    margin-top: var(--space-lg);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.self-test-note a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Large form variant (final CTA) */
+.audit-form-large {
+    max-width: 700px;
+}
+
+.form-fields-horizontal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.form-fields-horizontal input,
+.form-fields-horizontal select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+    font-family: var(--font-sans);
+}
+
+.form-fields-horizontal input:focus,
+.form-fields-horizontal select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-fields-horizontal select {
+    cursor: pointer;
+    background: var(--color-bg-alt);
+}
+
+.form-fields-horizontal .cta-button {
+    width: 100%;
+}
+
+.form-note-centered {
+    text-align: center;
+    margin-top: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+/* Legacy form elements (keep for compatibility) */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -1048,6 +1166,82 @@ a:hover {
 }
 
 /* -----------------------------------------------------------------------------
+   Thank You Page
+   ----------------------------------------------------------------------------- */
+.thank-you {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+}
+
+.thank-you-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-lg);
+    background: var(--color-good);
+    color: #fff;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you h1 {
+    margin: 0 0 var(--space-md) 0;
+    font-size: 2rem;
+}
+
+.thank-you p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.what-next {
+    text-align: left;
+    background: var(--color-bg);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-xl) 0;
+    border: 1px solid var(--color-border);
+}
+
+.what-next h3 {
+    margin: 0 0 var(--space-md) 0;
+    font-size: 1.1rem;
+}
+
+.what-next ol {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.what-next li {
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
+.what-next li strong {
+    color: var(--color-text);
+}
+
+.meanwhile {
+    color: var(--color-text-light);
+}
+
+.meanwhile a {
+    color: var(--color-accent);
+}
+
+/* -----------------------------------------------------------------------------
    Responsive: Tablet (768px+)
    ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
@@ -1065,6 +1259,19 @@ a:hover {
 
     .url-input {
         flex: 1;
+    }
+
+    .form-fields-horizontal {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-fields-horizontal .cta-button {
+        grid-column: span 2;
+    }
+
+    .form-note {
+        flex-direction: row;
+        gap: var(--space-md);
     }
 
     .demo-container {

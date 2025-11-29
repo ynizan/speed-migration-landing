@@ -69,6 +69,17 @@ PAGES = [
             "changefreq": "monthly",
         }
     },
+    {
+        "template": "pages/thank-you.html",
+        "output": "thank-you/index.html",
+        "config": {
+            "title": "Thanks! We're Analyzing Your Site | LightLoad",
+            "description": "Your migration analysis is on its way.",
+            "canonical": "/thank-you/",
+            "priority": "0.1",
+            "changefreq": "monthly",
+        }
+    },
 ]
 
 # Speed comparison data (used in templates)
