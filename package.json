@@ -1,0 +1,20 @@
+{
+  "name": "flows123-brand",
+  "version": "1.0.0",
+  "description": "Flows123 brand assets and compliance tests",
+  "scripts": {
+    "test": "jest",
+    "test:brand": "jest tests/brand"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "playwright": "^1.57.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "verbose": true
+  }
+}
