@@ -1,0 +1,31 @@
+{
+  "brand": {
+    "primary": "#0066FF",
+    "accent": "#BFFF00",
+    "black": "#0A0A0A",
+    "white": "#FFFFFF"
+  },
+  "gray": {
+    "100": "#F5F5F5",
+    "300": "#D4D4D4",
+    "500": "#737373",
+    "700": "#404040"
+  },
+  "semantic": {
+    "success": "#22C55E",
+    "warning": "#F59E0B",
+    "error": "#EF4444"
+  },
+  "derived": {
+    "primaryLight": "#3B82F6",
+    "primaryDark": "#0044CC"
+  },
+  "approvedCombinations": [
+    { "background": "#FFFFFF", "foreground": "#0066FF", "name": "Blue on White" },
+    { "background": "#0A0A0A", "foreground": "#FFFFFF", "name": "White on Black" },
+    { "background": "#0066FF", "foreground": "#FFFFFF", "name": "White on Blue" },
+    { "background": "#BFFF00", "foreground": "#0A0A0A", "name": "Black on Lime" },
+    { "background": "#0A0A0A", "foreground": "#BFFF00", "name": "Lime on Black" },
+    { "background": "#0066FF", "foreground": "#0A0A0A", "name": "Black on Blue" }
+  ]
+}

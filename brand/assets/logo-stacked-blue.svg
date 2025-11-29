@@ -1,0 +1,6 @@
+<svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightning bolt - centered -->
+  <path d="M68 4L52 26H62L58 44L76 20H66L68 4Z" transform="translate(-8, 0)" fill="#0066FF"/>
+  <!-- Text "flows123" - centered below -->
+  <text x="60" y="80" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="20" letter-spacing="-0.02em" fill="#0066FF">flows123</text>
+</svg>
