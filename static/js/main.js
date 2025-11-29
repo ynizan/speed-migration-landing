@@ -103,36 +103,18 @@
         }
     }
 
-    // Form handling
+    // Form handling - show loading state on submit
     function initForms() {
         const forms = document.querySelectorAll('.audit-form');
 
         forms.forEach(function(form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const urlInput = form.querySelector('input[name="website_url"]');
-                const url = urlInput ? urlInput.value.trim() : '';
-
-                if (!url) return;
-
-                // Show simple confirmation (replace with actual API call)
+            form.addEventListener('submit', function() {
+                // Show loading state while form submits to Formspree
                 const button = form.querySelector('button[type="submit"]');
-                const originalText = button.textContent;
-
-                button.textContent = 'Analyzing...';
-                button.disabled = true;
-
-                // Simulate API call - replace with actual endpoint
-                setTimeout(function() {
-                    button.textContent = 'Check your email!';
-
-                    setTimeout(function() {
-                        button.textContent = originalText;
-                        button.disabled = false;
-                        urlInput.value = '';
-                    }, 3000);
-                }, 1500);
+                if (button) {
+                    button.textContent = 'Submitting...';
+                    button.disabled = true;
+                }
             });
         });
     }

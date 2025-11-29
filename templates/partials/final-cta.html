@@ -1,36 +1,47 @@
 <section class="final-cta-section">
     <div class="section-container">
-        <h2 class="cta-title">Stop losing visitors to slow load times</h2>
+        <h2 class="cta-title">Ready to stop losing visitors?</h2>
         <p class="cta-subtitle">
-            Every second of load time costs you 7% in conversions.
-            See how much faster your site could be.
+            Every second of load time costs you conversions. Let's fix that.
         </p>
 
-        <form class="audit-form audit-form-large" id="final-audit-form">
-            <div class="form-group">
+        <form action="https://formspree.io/f/mkgldrpl" method="POST" class="audit-form audit-form-large" id="final-audit-form">
+            <input type="hidden" name="_subject" value="New Migration Analysis Request" />
+            <input type="hidden" name="_next" value="{{ site_url }}/thank-you/" />
+
+            <div class="form-fields-horizontal">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                    required
+                />
+
                 <input
                     type="url"
                     name="website_url"
                     placeholder="Your website URL"
                     required
-                    class="url-input url-input-large"
-                    autocomplete="url"
-                >
-                <button type="submit" class="cta-button cta-button-large">
-                    Get Free Speed Audit
-                </button>
-            </div>
-        </form>
+                />
 
-        <div class="cta-trust">
-            <p class="trust-headline">Join 500+ site owners who've already made the switch</p>
-            <div class="trust-stats">
-                <span class="stat">Average improvement: <strong>7.4x faster</strong></span>
-                <span class="stat-divider">&bull;</span>
-                <span class="stat">No credit card</span>
-                <span class="stat-divider">&bull;</span>
-                <span class="stat">Results in 30 seconds</span>
+                <select name="build_tool" required>
+                    <option value="" disabled selected>Built with...</option>
+                    <option value="bolt">Bolt.new</option>
+                    <option value="lovable">Lovable</option>
+                    <option value="base44">Base44</option>
+                    <option value="v0">v0.dev</option>
+                    <option value="wix">Wix</option>
+                    <option value="squarespace">Squarespace</option>
+                    <option value="wordpress">WordPress</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit" class="cta-button">Get My Free Analysis →</button>
             </div>
-        </div>
+
+            <p class="form-note-centered">
+                ✓ No credit card &nbsp;&nbsp; ✓ Delivered within 24 hours &nbsp;&nbsp; ✓ Includes migration quote
+            </p>
+        </form>
     </div>
 </section>
