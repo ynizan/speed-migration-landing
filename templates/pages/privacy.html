@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="legal-page">
+    <div class="legal-container">
+        <h1>Privacy Policy</h1>
+        <p class="legal-updated">Last updated: {{ build_date[:10] }}</p>
+
+        <h2>Information We Collect</h2>
+        <p>
+            When you use our speed audit service, we collect the following information:
+        </p>
+        <ul>
+            <li><strong>Website URL:</strong> The URL you submit for analysis</li>
+            <li><strong>Contact Information:</strong> Email address if you choose to receive results</li>
+            <li><strong>Usage Data:</strong> How you interact with our website (pages visited, time spent)</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+            <li>Perform speed audits on submitted websites</li>
+            <li>Send you audit results and migration recommendations</li>
+            <li>Improve our services and website performance</li>
+            <li>Communicate with you about our services</li>
+        </ul>
+
+        <h2>Data Storage and Security</h2>
+        <p>
+            Your data is stored securely and we implement appropriate technical measures to protect
+            your personal information. We do not sell or share your data with third parties except
+            as necessary to provide our services.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+            We use minimal cookies necessary for website functionality. We do not use tracking
+            cookies or third-party advertising cookies.
+        </p>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access the personal data we hold about you</li>
+            <li>Request correction of inaccurate data</li>
+            <li>Request deletion of your data</li>
+            <li>Opt out of marketing communications</li>
+        </ul>
+
+        <h2>Contact Us</h2>
+        <p>
+            If you have questions about this Privacy Policy, please contact us at
+            privacy@lightload.io
+        </p>
+    </div>
+</section>
+{% endblock %}

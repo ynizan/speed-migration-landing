@@ -1,0 +1,57 @@
+<section class="speed-demo-section">
+    <div class="section-container">
+        <h2 class="section-title">See the difference</h2>
+        <p class="section-subtitle">Side-by-side loading comparison</p>
+
+        <div class="demo-container">
+            <div class="demo-panel demo-slow">
+                <div class="demo-header">
+                    <span class="demo-badge badge-slow">Typical AI Site</span>
+                    <span class="demo-timer" id="slow-timer">0.0s</span>
+                </div>
+                <div class="demo-screen" id="slow-screen">
+                    <div class="skeleton-loader">
+                        <div class="skeleton-header"></div>
+                        <div class="skeleton-hero"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-stats">
+                    <span class="stat-item">2.5MB JS Bundle</span>
+                    <span class="stat-item">No Caching</span>
+                </div>
+            </div>
+
+            <div class="demo-vs">VS</div>
+
+            <div class="demo-panel demo-fast">
+                <div class="demo-header">
+                    <span class="demo-badge badge-fast">After Migration</span>
+                    <span class="demo-timer" id="fast-timer">0.0s</span>
+                </div>
+                <div class="demo-screen demo-loaded" id="fast-screen">
+                    <div class="demo-content-preview">
+                        <div class="preview-header"></div>
+                        <div class="preview-hero"></div>
+                        <div class="preview-text">
+                            <div class="preview-line"></div>
+                            <div class="preview-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-stats">
+                    <span class="stat-item">50KB Total</span>
+                    <span class="stat-item">Edge Cached</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="demo-replay-btn" id="demo-replay">
+            Replay Demo
+        </button>
+    </div>
+</section>

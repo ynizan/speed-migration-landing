@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'partials/seo-head.html' %}
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/css/styles.css" as="style">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    {% include 'partials/header.html' %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <!-- Minimal JS at end of body -->
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

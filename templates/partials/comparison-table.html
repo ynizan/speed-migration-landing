@@ -1,0 +1,44 @@
+<section class="comparison-section" id="comparison">
+    <div class="section-container">
+        <h2 class="section-title">The numbers don't lie</h2>
+        <p class="section-subtitle">Real PageSpeed Insights data</p>
+
+        <div class="table-wrapper">
+            <table class="speed-table">
+                <thead>
+                    <tr>
+                        <th>Website Builder</th>
+                        <th>Mobile LCP</th>
+                        <th>PageSpeed Score</th>
+                        <th>SEO Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for competitor in speed_data.competitors %}
+                    <tr class="status-{{ competitor.status }}">
+                        <td class="builder-name">{{ competitor.name }}</td>
+                        <td class="metric">{{ competitor.lcp }}</td>
+                        <td class="metric">
+                            <span class="score score-{{ competitor.status }}">{{ competitor.score }}/100</span>
+                        </td>
+                        <td class="impact impact-{{ competitor.status }}">{{ competitor.label }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr class="status-{{ speed_data.ours.status }} highlight-row">
+                        <td class="builder-name"><strong>{{ speed_data.ours.name }}</strong></td>
+                        <td class="metric"><strong>{{ speed_data.ours.lcp }}</strong></td>
+                        <td class="metric">
+                            <span class="score score-{{ speed_data.ours.status }}"><strong>{{ speed_data.ours.score }}/100</strong></span>
+                        </td>
+                        <td class="impact impact-{{ speed_data.ours.status }}">{{ speed_data.ours.label }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="table-note">
+            <strong>{{ speed_data.improvement_factor }} faster</strong> &mdash;
+            Google penalizes sites with LCP over 4 seconds. Most AI builders don't even come close.
+        </p>
+    </div>
+</section>

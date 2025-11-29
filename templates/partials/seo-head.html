@@ -1,0 +1,98 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary Meta Tags -->
+<title>{{ title }}</title>
+<meta name="title" content="{{ title }}">
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ business_name }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site_url }}{{ canonical }}">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site_url }}{{ canonical }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ site_url }}{{ default_og_image }}">
+<meta property="og:site_name" content="{{ site_name }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ site_url }}{{ canonical }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site_url }}{{ default_og_image }}">
+{% if twitter_handle %}
+<meta name="twitter:site" content="{{ twitter_handle }}">
+{% endif %}
+
+<!-- Structured Data: Organization -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ business_name }}",
+    "url": "{{ site_url }}",
+    "logo": "{{ site_url }}/images/logo.png",
+    "description": "{{ site_description }}"
+}
+</script>
+
+<!-- Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{ site_name }}",
+    "description": "{{ site_description }}",
+    "url": "{{ site_url }}",
+    "applicationCategory": "WebApplication",
+    "operatingSystem": "Web",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free speed audit"
+    }
+}
+</script>
+
+<!-- Structured Data: FAQPage (for SEO) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why are AI-generated websites slow?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI website builders like Bolt.new and Lovable generate bloated React applications with massive JavaScript bundles (2-5MB), unoptimized images, and server-side rendering overhead. This results in load times of 12-20 seconds."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much faster will my site be after migration?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "On average, migrated sites load 7.4x faster. A typical Bolt.new site loading in 20 seconds will load in under 3 seconds after migration to our static hosting."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does site speed affect SEO?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Google confirmed Core Web Vitals (including LCP - Largest Contentful Paint) are ranking factors. Sites with LCP over 4 seconds receive ranking penalties, while sites under 2.5 seconds get a ranking boost."
+            }
+        }
+    ]
+}
+</script>
