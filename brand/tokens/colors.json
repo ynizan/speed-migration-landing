@@ -13,8 +13,12 @@
   },
   "semantic": {
     "success": "#22C55E",
+    "successBg": "#DCFCE7",
     "warning": "#F59E0B",
-    "error": "#EF4444"
+    "warningBg": "#FEF3CD",
+    "error": "#EF4444",
+    "errorBg": "#FEE2E2",
+    "severe": "#DC2626"
   },
   "derived": {
     "primaryLight": "#3B82F6",

@@ -26,8 +26,12 @@ describe('Brand Compliance', () => {
       colors.gray['500'],
       colors.gray['700'],
       colors.semantic.success,
+      colors.semantic.successBg,
       colors.semantic.warning,
+      colors.semantic.warningBg,
       colors.semantic.error,
+      colors.semantic.errorBg,
+      colors.semantic.severe,
       colors.derived.primaryLight,
       colors.derived.primaryDark,
     ].map(c => c.toLowerCase());

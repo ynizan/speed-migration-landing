@@ -19,10 +19,10 @@
    ----------------------------------------------------------------------------- */
 :root {
     /* Brand Colors */
-    --color-primary: #0066FF;           /* Electric Blue */
-    --color-accent: #0066FF;            /* Primary Blue for CTAs */
-    --color-accent-hover: #0044CC;      /* Darker blue for hover */
-    --color-accent-lime: #BFFF00;       /* Lime Accent */
+    --color-primary: #0066FF;           /* Electric Blue - main brand color */
+    --color-primary-hover: #0044CC;     /* Darker blue for hover */
+    --color-primary-light: #3B82F6;     /* Lighter blue */
+    --color-accent: #BFFF00;            /* Lime Accent - highlights */
     --color-black: #0A0A0A;             /* Rich Black */
     --color-white: #FFFFFF;             /* White */
 
@@ -100,7 +100,7 @@ img {
 }
 
 a {
-    color: var(--color-accent);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -204,7 +204,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     padding: var(--space-md) var(--space-lg);
-    background: var(--color-accent);
+    background: var(--color-primary);
     color: white;
     font-weight: 600;
     font-size: 1rem;
@@ -216,7 +216,7 @@ a:hover {
 }
 
 .cta-button:hover {
-    background: var(--color-accent-hover);
+    background: var(--color-primary-hover);
     text-decoration: none;
     transform: translateY(-1px);
 }
@@ -367,7 +367,7 @@ a:hover {
 
 .url-input:focus {
     outline: none;
-    border-color: var(--color-accent);
+    border-color: var(--color-primary);
 }
 
 .url-input-large {
@@ -608,13 +608,13 @@ a:hover {
 .preview-header {
     height: 20px;
     width: 60%;
-    background: var(--color-accent);
+    background: var(--color-primary);
     border-radius: 4px;
 }
 
 .preview-hero {
     height: 80px;
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-good) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-good) 100%);
     border-radius: 4px;
 }
 
@@ -660,8 +660,8 @@ a:hover {
 }
 
 .demo-replay-btn:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 /* -----------------------------------------------------------------------------
@@ -686,7 +686,7 @@ a:hover {
 }
 
 .card-icon {
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-bottom: var(--space-md);
 }
 
@@ -748,7 +748,7 @@ a:hover {
     font-family: var(--font-mono);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-bottom: var(--space-xs);
 }
 
@@ -852,7 +852,7 @@ a:hover {
     transform: translateX(-50%);
     width: 28px;
     height: 28px;
-    background: var(--color-accent);
+    background: var(--color-primary);
     color: white;
     font-weight: 700;
     font-size: 0.9rem;
@@ -863,7 +863,7 @@ a:hover {
 }
 
 .step-icon {
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin: var(--space-md) 0;
 }
 
