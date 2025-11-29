@@ -1,33 +1,53 @@
 /* =============================================================================
-   LightLoad - Performance-Optimized CSS
-   Mobile-first, system fonts, minimal footprint
+   Flows123 - Performance-Optimized CSS
+   Mobile-first, Manrope font, minimal footprint
    Target: < 14KB (fits in first TCP packet)
    ============================================================================= */
+
+/* Font Loading - Optimized for speed */
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* -----------------------------------------------------------------------------
    CSS Variables & Reset
    ----------------------------------------------------------------------------- */
 :root {
-    /* Colors */
-    --color-bg: #fafafa;
-    --color-bg-alt: #ffffff;
-    --color-text: #111111;
-    --color-text-muted: #444444;
-    --color-text-light: #666666;
-    --color-border: #e5e5e5;
+    /* Brand Colors */
+    --color-primary: #0066FF;           /* Electric Blue */
+    --color-accent: #0066FF;            /* Primary Blue for CTAs */
+    --color-accent-hover: #0044CC;      /* Darker blue for hover */
+    --color-accent-lime: #BFFF00;       /* Lime Accent */
+    --color-black: #0A0A0A;             /* Rich Black */
+    --color-white: #FFFFFF;             /* White */
+
+    /* Gray Scale */
+    --color-gray-100: #F5F5F5;          /* Light backgrounds */
+    --color-gray-300: #D4D4D4;          /* Borders, dividers */
+    --color-gray-500: #737373;          /* Secondary text */
+    --color-gray-700: #404040;          /* Body text */
+
+    /* Semantic Colors */
+    --color-bg: #F5F5F5;
+    --color-bg-alt: #FFFFFF;
+    --color-text: #0A0A0A;
+    --color-text-muted: #404040;
+    --color-text-light: #737373;
+    --color-border: #D4D4D4;
 
     /* Status Colors */
-    --color-good: #00aa55;
-    --color-good-bg: #e6f7ef;
-    --color-moderate: #f59e0b;
-    --color-moderate-bg: #fef3cd;
-    --color-bad: #dc2626;
-    --color-bad-bg: #fee2e2;
-    --color-severe: #991b1b;
-
-    /* Accent */
-    --color-accent: #2563eb;
-    --color-accent-hover: #1d4ed8;
+    --color-good: #22C55E;
+    --color-good-bg: #DCFCE7;
+    --color-moderate: #F59E0B;
+    --color-moderate-bg: #FEF3CD;
+    --color-bad: #EF4444;
+    --color-bad-bg: #FEE2E2;
+    --color-severe: #DC2626;
 
     /* Spacing */
     --space-xs: 0.25rem;
@@ -39,8 +59,13 @@
     --space-3xl: 4rem;
 
     /* Typography */
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", monospace;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 800;
 
     /* Sizing */
     --max-width: 1200px;
@@ -130,15 +155,28 @@ a:hover {
 .logo {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    font-weight: 700;
+    gap: 6px; /* Brand guideline: exactly 6px gap */
+    font-weight: var(--font-weight-bold);
     font-size: 1.25rem;
-    color: var(--color-text);
+    color: var(--color-primary);
     text-decoration: none;
+    letter-spacing: -0.02em;
 }
 
 .logo-icon {
-    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.logo-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
@@ -900,8 +938,8 @@ a:hover {
    ----------------------------------------------------------------------------- */
 .site-footer {
     padding: var(--space-2xl) var(--space-md);
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-black);
+    color: var(--color-white);
 }
 
 .footer-container {
@@ -913,7 +951,15 @@ a:hover {
 
 .footer-brand .logo-text {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
+}
+
+.footer-logo {
+    color: var(--color-white);
+}
+
+.footer-logo .logo-text {
+    color: var(--color-white);
 }
 
 .footer-tagline {

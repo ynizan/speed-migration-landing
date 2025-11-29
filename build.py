@@ -16,17 +16,17 @@ from jinja2 import Environment, FileSystemLoader
 
 SITE_CONFIG = {
     # Core site info
-    "site_name": "LightLoad",
+    "site_name": "flows123",
     "site_url": "https://speed-migration.pages.dev",
     "site_description": "Migrate your slow AI-generated website to lightning-fast static hosting. 7x faster loading, better SEO, higher conversions.",
 
     # SEO
-    "default_title": "Migrate Your Slow AI Website | 7x Faster Loading | LightLoad",
+    "default_title": "Migrate Your Slow AI Website | 7x Faster Loading | Flows123",
     "default_og_image": "/images/og-image.png",
     "twitter_handle": "",
 
     # Business info (for structured data)
-    "business_name": "LightLoad",
+    "business_name": "Flows123",
     "business_type": "SoftwareApplication",
 
     # Build info
@@ -51,8 +51,8 @@ PAGES = [
         "template": "pages/privacy.html",
         "output": "privacy/index.html",
         "config": {
-            "title": "Privacy Policy | LightLoad",
-            "description": "Privacy policy for LightLoad website migration service.",
+            "title": "Privacy Policy | Flows123",
+            "description": "Privacy policy for Flows123 website migration service.",
             "canonical": "/privacy/",
             "priority": "0.3",
             "changefreq": "monthly",
@@ -62,8 +62,8 @@ PAGES = [
         "template": "pages/terms.html",
         "output": "terms/index.html",
         "config": {
-            "title": "Terms of Service | LightLoad",
-            "description": "Terms of service for LightLoad website migration service.",
+            "title": "Terms of Service | Flows123",
+            "description": "Terms of service for Flows123 website migration service.",
             "canonical": "/terms/",
             "priority": "0.3",
             "changefreq": "monthly",

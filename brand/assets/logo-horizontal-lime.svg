@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightning bolt -->
+  <path d="M28 4L12 26H22L18 44L36 20H26L28 4Z" fill="#BFFF00"/>
+  <!-- Text "flows123" - positioned with 6px gap -->
+  <text x="46" y="34" font-family="Manrope, sans-serif" font-weight="800" font-size="28" letter-spacing="-0.02em" fill="#BFFF00">flows123</text>
+</svg>

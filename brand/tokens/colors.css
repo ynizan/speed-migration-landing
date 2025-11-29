@@ -1,0 +1,27 @@
+/* =============================================================================
+   Flows123 Design Tokens - Colors
+   Brand colors optimized for speed and performance
+   ============================================================================= */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0066FF;           /* Electric Blue */
+  --color-accent: #BFFF00;            /* Lime Accent */
+
+  /* Neutrals */
+  --color-black: #0A0A0A;             /* Rich Black */
+  --color-white: #FFFFFF;             /* White */
+  --color-gray-100: #F5F5F5;          /* Light backgrounds */
+  --color-gray-300: #D4D4D4;          /* Borders, dividers */
+  --color-gray-500: #737373;          /* Secondary text */
+  --color-gray-700: #404040;          /* Body text */
+
+  /* Semantic Colors (for UI states) */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Derived Colors */
+  --color-primary-light: #3B82F6;     /* Hover states */
+  --color-primary-dark: #0044CC;      /* Active states */
+}
