@@ -91,6 +91,17 @@ PAGES = [
             "changefreq": "monthly",
         }
     },
+    {
+        "template": "pages/about.html",
+        "output": "about/index.html",
+        "config": {
+            "title": "About | Flows123",
+            "description": "Meet the founders of Flows123 - serial entrepreneurs building the speed-first AI website builder.",
+            "canonical": "/about/",
+            "priority": "0.5",
+            "changefreq": "monthly",
+        }
+    },
 ]
 
 # Speed comparison data (used in templates)
