@@ -103,6 +103,17 @@ PAGES = [
         }
     },
     {
+        "template": "pages/sample-report.html",
+        "output": "sample-report/index.html",
+        "config": {
+            "title": "Sample Speed Report | Flows123",
+            "description": "See exactly what you'll get: a detailed speed analysis with problems identified and projected improvements.",
+            "canonical": "/sample-report/",
+            "priority": "0.5",
+            "changefreq": "monthly",
+        }
+    },
+    {
         "template": "pages/about.html",
         "output": "about/index.html",
         "config": {
