@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="case-studies-page">
+    <div class="section-container">
+        <div class="case-studies-page-header">
+            <h1>Slow Websites Cost More Than You Think</h1>
+            <p>Data-driven evidence from Google, independent research, and real businesses that proves speed directly impacts your bottom line.</p>
+        </div>
+
+        <div class="case-studies-detail-grid">
+
+            <!-- Case Study 1: Google's Official Research -->
+            <article class="case-study-detail">
+                <div class="case-study-header">
+                    <span class="case-study-category">Official Research</span>
+                    <h2 class="case-study-headline">Every Second Costs You 20% of Conversions</h2>
+                </div>
+
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h3>The Data</h3>
+                        <ul>
+                            <li>Conversions drop up to 20% for every 1-second delay in mobile load time</li>
+                            <li>53% of mobile users abandon sites that take longer than 3 seconds to load</li>
+                            <li>Core Web Vitals became an official Google ranking factor in June 2021</li>
+                        </ul>
+                    </div>
+
+                    <blockquote class="case-study-quote">
+                        "A fast site keeps people browsing; a slow site sends them packing."
+                    </blockquote>
+
+                    <div class="case-study-section">
+                        <h3>Why It Matters</h3>
+                        <p>Google doesn't just recommend fast sites—they now penalize slow ones in search rankings. Since June 2021, Core Web Vitals (LCP, CLS, and INP) directly affect where you appear in search results.</p>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="https://developers.google.com/search/docs/appearance/core-web-vitals"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link">
+                        Read Google's documentation →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Study 2: Link-Assistant.com -->
+            <article class="case-study-detail">
+                <div class="case-study-header">
+                    <span class="case-study-category">Software Company</span>
+                    <h2 class="case-study-headline">30% of Organic Clicks Gone in One Week</h2>
+                </div>
+
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h3>The Problem</h3>
+                        <p>After the June 2021 Google Page Experience update, Link-Assistant.com noticed a significant drop in organic traffic. Their Core Web Vitals scores had degraded from "good" (green) to "needs improvement" (amber).</p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Impact</h3>
+                        <ul>
+                            <li>30% decrease in organic clicks within one week of CWV degradation</li>
+                            <li>Traffic continued declining for months</li>
+                            <li>Direct correlation observed between CWV scores and search visibility</li>
+                        </ul>
+                    </div>
+
+                    <blockquote class="case-study-quote">
+                        "The week that followed the spike in the Core Web Vitals report resulted in a whopping 30% decrease in organic clicks."
+                    </blockquote>
+
+                    <div class="case-study-section">
+                        <h3>The Results</h3>
+                        <p>When URLs returned to "green" status, organic clicks recovered to previous levels. The team documented a "remarkably vivid correlation between organic impressions and a good Core Web Vitals score."</p>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="https://www.link-assistant.com/news/core-web-vitals-case-study.html"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link">
+                        Read the full case study →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Study 3: CoinStats -->
+            <article class="case-study-detail">
+                <div class="case-study-header">
+                    <span class="case-study-category">Fintech / Crypto</span>
+                    <h2 class="case-study-headline">300% More Search Impressions After Fixing LCP</h2>
+                </div>
+
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h3>The Problem</h3>
+                        <p>CoinStats knew many of their pages had "Poor" Core Web Vitals scores. High bounce rates and declining search traffic indicated serious performance issues.</p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Diagnosis</h3>
+                        <p>Using performance analysis tools, they discovered the main issue: slow Largest Contentful Paint (LCP) caused by Base64-encoded images embedded directly in HTML, which dramatically increased page size and loading times.</p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Solution</h3>
+                        <p>Replaced Base64 images with conventional image sources, reducing page weight significantly.</p>
+                    </div>
+
+                    <blockquote class="case-study-quote">
+                        "By replacing these images with conventional src attributes, they reduced page weight and improved their LCP scores. The eventual SEO impact? They increased search impressions by 300%."
+                    </blockquote>
+
+                    <div class="case-study-section">
+                        <h3>The Results</h3>
+                        <ul>
+                            <li>300% increase in URLs with "Good" Core Web Vitals scores</li>
+                            <li>300% increase in search impressions</li>
+                            <li>Improved bounce rates and user engagement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="https://www.debugbear.com/docs/core-web-vitals-ranking-factor"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link">
+                        Read the full case study →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Study 4: Non-Profit Organization -->
+            <article class="case-study-detail">
+                <div class="case-study-header">
+                    <span class="case-study-category">Non-Profit</span>
+                    <h2 class="case-study-headline">Slow Site Threatened Their Funding</h2>
+                </div>
+
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h3>The Problem</h3>
+                        <p>An early childhood education non-profit approached SiteCare in May 2023 because their website was slow and user experience was suffering. They had seen a steep decline in website traffic and visibility in search engines.</p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Stakes</h3>
+                        <ul>
+                            <li>Lower traffic meant lower direct donations</li>
+                            <li>Website traffic was a key metric for securing funding from outside donors</li>
+                            <li>Their important messaging was losing traction</li>
+                        </ul>
+                    </div>
+
+                    <blockquote class="case-study-quote">
+                        "I was holding back tears when I checked our Core Web Vitals from the plane on Monday! What an astronomical improvement!"
+                    </blockquote>
+
+                    <div class="case-study-section">
+                        <h3>The Results</h3>
+                        <ul>
+                            <li>All URLs achieved "Good" Core Web Vitals for Mobile and Desktop</li>
+                            <li>35,000 additional search impressions per month</li>
+                            <li>7,000 additional sessions per month</li>
+                            <li>Higher rankings than ever before for important keyphrases</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="https://sitecare.com/case-studies/core-web-vitals-zero-to-three/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link">
+                        Read the full case study →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Study 5: SISTRIX Industry Study -->
+            <article class="case-study-detail">
+                <div class="case-study-header">
+                    <span class="case-study-category">Industry Research</span>
+                    <h2 class="case-study-headline">Slow Sites Rank 3.7 Percentage Points Lower</h2>
+                </div>
+
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h3>The Study</h3>
+                        <p>SISTRIX analyzed rankings across thousands of websites to measure the actual impact of Core Web Vitals on Google search visibility.</p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Key Findings</h3>
+                        <ul>
+                            <li>Pages meeting all Google CWV requirements rank 1 percentage point better than average</li>
+                            <li>Pages failing at least one CWV requirement rank 3.7 percentage points worse</li>
+                            <li>The gap between passing and failing sites: 4.7 percentage points in visibility</li>
+                        </ul>
+                    </div>
+
+                    <blockquote class="case-study-quote">
+                        "Slow pages rank significantly worse. Websites that fail at least one of the Google requirements rank 3.7 percentage points worse."
+                    </blockquote>
+
+                    <div class="case-study-section">
+                        <h3>Why This Matters</h3>
+                        <p>In competitive niches, a 4.7 percentage point difference in visibility can mean the difference between page 1 and page 2—and page 2 might as well be invisible.</p>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="https://www.sistrix.com/blog/core-web-vitals-is-a-measurable-ranking-factor/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link">
+                        Read the full study →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Study 6: Weidert Group -->
+            <article class="case-study-detail">
+                <div class="case-study-header">
+                    <span class="case-study-category">B2B Marketing</span>
+                    <h2 class="case-study-headline">A Marketing Agency's Traffic Dropped After the Update</h2>
+                </div>
+
+                <div class="case-study-body">
+                    <div class="case-study-section">
+                        <h3>The Situation</h3>
+                        <p>Even experienced marketing professionals weren't immune. Weidert Group, an inbound marketing agency, saw their own website traffic drop after the June 2021 Core Web Vitals update.</p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Response</h3>
+                        <p>They documented their recovery process publicly, sharing that page-by-page optimization was required for a large, established site.</p>
+                    </div>
+
+                    <blockquote class="case-study-quote">
+                        "Our own website saw a significant drop in traffic with the June 2021 Google algorithm update, and we're currently at work to correct the drop by improving page performance."
+                    </blockquote>
+
+                    <div class="case-study-section">
+                        <h3>The Lesson</h3>
+                        <p>If a marketing agency's site can be affected, any site can. The fix requires systematic attention to performance, not just good content.</p>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="https://www.weidert.com/blog/technical-seo-website-optimization-case-study"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link">
+                        Read the full case study →
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="case-studies-page-cta">
+            <h3>Don't Let Slow Sites Cost You Customers</h3>
+            <p>Flows123 builds lightning-fast websites that pass Core Web Vitals—guaranteed.</p>
+            <a href="/#audit" class="cta-button">Get Your Free Speed Analysis →</a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
