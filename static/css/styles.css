@@ -1726,6 +1726,413 @@ a:hover {
 }
 
 /* -----------------------------------------------------------------------------
+   Pricing Page
+   ----------------------------------------------------------------------------- */
+.pricing-hero {
+    padding: var(--space-3xl) var(--space-md) var(--space-xl);
+    background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.02em;
+}
+
+.pricing-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+/* Billing Toggle */
+.billing-toggle {
+    display: inline-flex;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 4px;
+    gap: 4px;
+}
+
+.toggle-option {
+    padding: var(--space-sm) var(--space-lg);
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.toggle-option:hover {
+    color: var(--color-text);
+}
+
+.toggle-option.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.save-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: var(--color-accent);
+    color: var(--color-black);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.toggle-option.active .save-badge {
+    background: white;
+    color: var(--color-primary);
+}
+
+/* Pricing Cards Section */
+.pricing-cards-section {
+    padding: var(--space-xl) var(--space-md) var(--space-3xl);
+}
+
+.pricing-grid {
+    display: grid;
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.popular {
+    border-color: var(--color-primary);
+    border-width: 2px;
+    box-shadow: 0 4px 24px rgba(0, 102, 255, 0.15);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.card-header {
+    margin-bottom: var(--space-lg);
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+.plan-description {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.card-pricing {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.price-display {
+    margin-bottom: var(--space-sm);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+.migration-note {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.migration-note .check {
+    color: var(--color-good);
+}
+
+.migration-note.monthly-note {
+    color: var(--color-text-muted);
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-xl) 0;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: var(--space-sm) 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.feature-check {
+    color: var(--color-good);
+    font-weight: 700;
+}
+
+.feature-x {
+    color: var(--color-text-light);
+}
+
+.feature-unavailable {
+    color: var(--color-text-light);
+}
+
+.pricing-card .cta-button {
+    width: 100%;
+    text-align: center;
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.cta-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.pricing-guarantee {
+    text-align: center;
+    margin-top: var(--space-xl);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.pricing-guarantee .check {
+    color: var(--color-good);
+}
+
+.guarantee-separator {
+    margin: 0 var(--space-sm);
+}
+
+/* Migration Pricing Section */
+.migration-pricing-section {
+    padding: var(--space-3xl) var(--space-md);
+    background: var(--color-bg-alt);
+}
+
+.migration-grid {
+    display: grid;
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.migration-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.migration-card.highlight {
+    border-color: var(--color-good);
+    background: var(--color-good-bg);
+}
+
+.migration-icon {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.migration-card.highlight .migration-icon {
+    color: var(--color-good);
+}
+
+.migration-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.migration-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-xs) 0;
+}
+
+.migration-card.highlight .migration-price {
+    color: var(--color-good);
+}
+
+.migration-description {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* What's Included Section */
+.whats-included-section {
+    padding: var(--space-3xl) var(--space-md);
+}
+
+.features-grid {
+    display: grid;
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.feature-icon {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.feature-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.feature-description {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Pricing FAQ Section */
+.pricing-faq-section {
+    padding: var(--space-3xl) var(--space-md);
+    background: var(--color-bg-alt);
+}
+
+.pricing-faq-section code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Pricing CTA Section */
+.pricing-cta-section {
+    padding: var(--space-3xl) var(--space-md);
+    text-align: center;
+}
+
+.pricing-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-note {
+    margin-top: var(--space-lg);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.cta-note .check {
+    color: var(--color-good);
+}
+
+.cta-note-separator {
+    margin: 0 var(--space-sm);
+}
+
+/* Pricing Teaser (for homepage) */
+.pricing-teaser {
+    margin-top: var(--space-lg);
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.pricing-teaser strong {
+    color: var(--color-text);
+}
+
+.pricing-teaser a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.pricing-teaser a:hover {
+    text-decoration: underline;
+}
+
+/* Pricing Page Responsive - Tablet */
+@media (min-width: 768px) {
+    .pricing-title {
+        font-size: 2.5rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .migration-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Pricing Page Responsive - Desktop */
+@media (min-width: 1024px) {
+    .pricing-title {
+        font-size: 3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* -----------------------------------------------------------------------------
    About Page
    ----------------------------------------------------------------------------- */
 .about-page {

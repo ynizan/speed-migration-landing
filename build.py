@@ -92,6 +92,17 @@ PAGES = [
         }
     },
     {
+        "template": "pages/pricing.html",
+        "output": "pricing/index.html",
+        "config": {
+            "title": "Pricing | Flows123 — Fast Hosting from $19/month",
+            "description": "Simple pricing. Migrate free with annual plan. Hosting from $19/month.",
+            "canonical": "/pricing/",
+            "priority": "0.8",
+            "changefreq": "weekly",
+        }
+    },
+    {
         "template": "pages/about.html",
         "output": "about/index.html",
         "config": {
