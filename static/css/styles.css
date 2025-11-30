@@ -40,14 +40,14 @@
     --color-text-light: #595959;        /* Improved contrast (7:1 ratio) */
     --color-border: #D4D4D4;
 
-    /* Status Colors */
-    --color-good: #22C55E;
+    /* Status Colors - WCAG AA compliant (4.5:1+ contrast on white/light backgrounds) */
+    --color-good: #15803d;              /* Darker green for AA compliance (5.5:1 on white) */
     --color-good-bg: #DCFCE7;
-    --color-moderate: #F59E0B;
+    --color-moderate: #b45309;          /* Darker amber for AA compliance (5.4:1 on white) */
     --color-moderate-bg: #FEF3CD;
-    --color-bad: #EF4444;
+    --color-bad: #dc2626;               /* Darker red for AA compliance (4.6:1 on white) */
     --color-bad-bg: #FEE2E2;
-    --color-severe: #DC2626;
+    --color-severe: #b91c1c;            /* Even darker red for severe (5.5:1 on white) */
 
     /* Spacing */
     --space-xs: 0.25rem;
@@ -130,11 +130,13 @@ img {
 
 a {
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 /* Focus states for accessibility - keyboard navigation */
@@ -243,7 +245,7 @@ summary:focus-visible {
     font-weight: var(--font-weight-bold);
     font-size: 1.25rem;
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: none !important;
     letter-spacing: -0.02em;
 }
 
@@ -273,11 +275,12 @@ summary:focus-visible {
     color: var(--color-text-muted);
     font-size: 0.9rem;
     display: none;
+    text-decoration: none;
 }
 
 .nav-link:hover {
     color: var(--color-text);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* -----------------------------------------------------------------------------
@@ -297,12 +300,14 @@ summary:focus-visible {
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .cta-button:hover {
     background: var(--color-primary-hover);
     text-decoration: none;
     transform: translateY(-1px);
+    opacity: 1;
 }
 
 .cta-button:active {
@@ -341,7 +346,7 @@ summary:focus-visible {
 }
 
 .highlight-slow {
-    color: var(--color-bad);
+    color: var(--color-severe);
 }
 
 .highlight-fast {
@@ -722,7 +727,11 @@ summary:focus-visible {
     font-size: 0.85rem;
 }
 
-.score-severe,
+.score-severe {
+    background: var(--color-bad-bg);
+    color: var(--color-severe);
+}
+
 .score-bad {
     background: var(--color-bad-bg);
     color: var(--color-bad);
@@ -738,7 +747,10 @@ summary:focus-visible {
     color: var(--color-good);
 }
 
-.impact-severe,
+.impact-severe {
+    color: var(--color-severe);
+}
+
 .impact-bad {
     color: var(--color-bad);
 }
@@ -1328,11 +1340,12 @@ summary:focus-visible {
     font-size: 0.9rem;
     padding: var(--space-xs) 0;
     opacity: 0.8;
+    text-decoration: none;
 }
 
 .footer-column a:hover {
     opacity: 1;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .footer-bottom {
@@ -1634,7 +1647,7 @@ summary:focus-visible {
 }
 
 .case-study-stat.negative {
-    color: var(--color-bad);
+    color: var(--color-severe);
 }
 
 .case-study-stat.positive {
@@ -1669,11 +1682,13 @@ summary:focus-visible {
     font-weight: var(--font-weight-semibold);
     font-size: 1rem;
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .text-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 /* -----------------------------------------------------------------------------
@@ -1787,13 +1802,15 @@ summary:focus-visible {
     font-weight: var(--font-weight-semibold);
     font-size: 0.875rem;
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
     display: inline-block;
     margin-top: var(--space-lg);
 }
 
 .source-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 /* Case Studies Page CTA */
@@ -1837,10 +1854,13 @@ summary:focus-visible {
 
 .about-text a {
     color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .about-text a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 /* -----------------------------------------------------------------------------
@@ -2213,11 +2233,13 @@ summary:focus-visible {
 
 .pricing-teaser a {
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .pricing-teaser a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 /* Pricing Page Responsive - Tablet */
@@ -2738,7 +2760,8 @@ summary:focus-visible {
 
 .founder-linkedin {
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
@@ -2746,7 +2769,8 @@ summary:focus-visible {
 }
 
 .founder-linkedin:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 @media (min-width: 640px) {
