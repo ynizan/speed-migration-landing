@@ -49,25 +49,49 @@
     "name": "{{ business_name }}",
     "url": "{{ site_url }}",
     "logo": "{{ site_url }}/images/logo.png",
-    "description": "{{ site_description }}"
+    "description": "{{ site_description }}",
+    "sameAs": []
 }
 </script>
 
-<!-- Structured Data: SoftwareApplication -->
+<!-- Structured Data: WebSite -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "{{ site_name }}",
-    "description": "{{ site_description }}",
+    "@type": "WebSite",
+    "name": "{{ business_name }}",
     "url": "{{ site_url }}",
-    "applicationCategory": "WebApplication",
-    "operatingSystem": "Web",
+    "description": "Speed-first website migration service",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site_url }}/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<!-- Structured Data: Product/Service -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Website Migration Service",
+    "description": "Migrate your slow AI-built website to lightning-fast static hosting. Average 7x speed improvement.",
+    "brand": {
+        "@type": "Brand",
+        "name": "{{ business_name }}"
+    },
     "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "description": "Free speed audit"
+        "description": "Free speed analysis",
+        "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
     }
 }
 </script>
@@ -83,7 +107,7 @@
             "name": "Why are AI-generated websites slow?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "AI website builders like Bolt.new and Lovable generate bloated React applications with massive JavaScript bundles (2-5MB), unoptimized images, and server-side rendering overhead. This results in load times of 12-20 seconds."
+                "text": "AI website builders like Bolt.new, Lovable, and Base44 generate bloated React applications with massive JavaScript bundles (2-5MB), unoptimized images, and server-side rendering overhead. This results in load times of 12-20 seconds, far above Google's recommended 2.5-second threshold."
             }
         },
         {
@@ -91,15 +115,31 @@
             "name": "How much faster will my site be after migration?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "On average, migrated sites load 7.4x faster. A typical Bolt.new site loading in 20 seconds will load in under 3 seconds after migration to our static hosting."
+                "text": "On average, migrated sites load 7x faster. A typical Bolt.new site loading in 20 seconds will load in under 3 seconds after migration to optimized static hosting on a global CDN."
             }
         },
         {
             "@type": "Question",
-            "name": "Does site speed affect SEO?",
+            "name": "Does website speed affect SEO and Google rankings?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Google confirmed Core Web Vitals (including LCP - Largest Contentful Paint) are ranking factors. Sites with LCP over 4 seconds receive ranking penalties, while sites under 2.5 seconds get a ranking boost."
+                "text": "Yes. Google confirmed Core Web Vitals (including LCP - Largest Contentful Paint) are ranking factors. Sites with LCP over 4 seconds receive ranking penalties, while sites under 2.5 seconds get a ranking boost. Slow sites also have higher bounce rates and lower conversions."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is included in the free speed analysis?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our free analysis includes: a complete performance audit of your current site, identification of specific bottlenecks (JavaScript size, image optimization, server response times), projected load time after migration, and a custom migration quote. Delivered to your inbox within 24 hours."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does migration take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most migrations are completed within 24-48 hours. Your site design and content remain the same—we optimize the underlying code and deploy to a global edge network for instant loading worldwide."
             }
         }
     ]

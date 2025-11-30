@@ -10,21 +10,26 @@
             <input type="hidden" name="_next" value="{{ site_url }}/thank-you/" />
 
             <div class="form-fields-horizontal">
+                <label for="final-email" class="visually-hidden">Your email address</label>
                 <input
                     type="email"
                     name="email"
+                    id="final-email"
                     placeholder="Your email"
                     required
                 />
 
+                <label for="final-website-url" class="visually-hidden">Your website URL</label>
                 <input
                     type="url"
                     name="website_url"
+                    id="final-website-url"
                     placeholder="Your website URL"
                     required
                 />
 
-                <select name="build_tool" required>
+                <label for="final-build-tool" class="visually-hidden">What tool did you build with?</label>
+                <select name="build_tool" id="final-build-tool" required>
                     <option value="" disabled selected>Built with...</option>
                     <option value="bolt">Bolt.new</option>
                     <option value="lovable">Lovable</option>
