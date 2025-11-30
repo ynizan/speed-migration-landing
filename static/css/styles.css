@@ -1442,11 +1442,27 @@ a:hover {
     }
 
     .case-study-grid {
-        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .case-study-card {
+        border-radius: 16px;
+        padding: var(--space-xl);
     }
 
     .case-study-stat {
         font-size: 3.5rem;
+        margin-bottom: var(--space-sm);
+    }
+
+    .case-study-context {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: var(--space-md);
+    }
+
+    .case-study-source {
+        font-size: 0.75rem;
     }
 }
 
@@ -1493,16 +1509,16 @@ a:hover {
 
 .case-study-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .case-study-card {
     background: var(--color-bg-alt);
-    border-radius: 16px;
-    padding: var(--space-xl);
+    border-radius: 12px;
+    padding: var(--space-md);
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     text-align: center;
 }
@@ -1510,9 +1526,9 @@ a:hover {
 .case-study-stat {
     font-family: var(--font-sans);
     font-weight: var(--font-weight-bold);
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: -0.02em;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
 }
 
 .case-study-stat.negative {
@@ -1526,16 +1542,16 @@ a:hover {
 .case-study-context {
     font-family: var(--font-sans);
     font-weight: var(--font-weight-regular);
-    font-size: 1rem;
+    font-size: 0.8125rem;
     color: var(--color-gray-700);
-    line-height: 1.6;
-    margin-bottom: var(--space-md);
+    line-height: 1.5;
+    margin-bottom: var(--space-sm);
 }
 
 .case-study-source {
     font-family: var(--font-sans);
     font-weight: var(--font-weight-semibold);
-    font-size: 0.75rem;
+    font-size: 0.625rem;
     color: var(--color-gray-500);
     text-transform: uppercase;
     letter-spacing: 0.1em;
