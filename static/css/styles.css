@@ -73,6 +73,22 @@
     --radius-lg: 12px;
 }
 
+/*
+ * COLOR USAGE RULES:
+ *
+ * Lime (#BFFF00 / --color-accent):
+ *   ✓ Text/links on black (#0A0A0A) background
+ *   ✓ Text/links on blue (#0066FF) background
+ *   ✗ NEVER on white or light gray backgrounds
+ *
+ * Blue (#0066FF / --color-primary):
+ *   ✓ Text/links on white (#FFFFFF) background
+ *   ✓ Text/links on light gray (#F5F5F5) background
+ *   ✓ Backgrounds with white text
+ *
+ * See brand/flows123-brand-guide-v2.html for full guidelines
+ */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -296,6 +312,10 @@ a:hover {
     color: var(--color-good);
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .hero-subtitle {
     font-size: 1.125rem;
     color: var(--color-text-muted);
@@ -452,8 +472,13 @@ a:hover {
 }
 
 .self-test-note a {
-    color: var(--color-accent);
+    color: var(--color-primary);
     text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.self-test-note a:hover {
+    color: var(--color-primary-hover);
 }
 
 /* Large form variant (final CTA) */
@@ -1333,7 +1358,13 @@ a:hover {
 }
 
 .meanwhile a {
-    color: var(--color-accent);
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.meanwhile a:hover {
+    color: var(--color-primary-hover);
 }
 
 /* -----------------------------------------------------------------------------
