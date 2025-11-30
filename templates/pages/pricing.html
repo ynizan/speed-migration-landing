@@ -1,0 +1,359 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Pricing Hero -->
+<section class="pricing-hero">
+    <div class="section-container">
+        <h1 class="pricing-title">Simple, Transparent Pricing</h1>
+        <p class="pricing-subtitle">No hidden fees. No surprises. Just fast hosting that works.</p>
+
+        <!-- Billing Toggle -->
+        <div class="billing-toggle">
+            <button type="button" class="toggle-option" data-billing="monthly">Monthly</button>
+            <button type="button" class="toggle-option active" data-billing="annual">
+                Annual
+                <span class="save-badge">Save 17%</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Cards -->
+<section class="pricing-cards-section">
+    <div class="section-container">
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h2 class="plan-name">Starter</h2>
+                    <p class="plan-description">For small sites and personal projects</p>
+                </div>
+                <div class="card-pricing">
+                    <div class="price-display">
+                        <span class="price monthly-price">$19</span>
+                        <span class="price annual-price" style="display: none;">$190</span>
+                        <span class="price-period monthly-period">/month</span>
+                        <span class="price-period annual-period" style="display: none;">/year</span>
+                    </div>
+                    <p class="migration-note annual-note">
+                        <span class="check">&#10003;</span> FREE migration included
+                    </p>
+                    <p class="migration-note monthly-note" style="display: none;">
+                        + $49 migration fee
+                    </p>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-check">&#10003;</span> <strong>10</strong> pages</li>
+                    <li><span class="feature-check">&#10003;</span> <strong>100</strong> builds/month</li>
+                    <li><span class="feature-check">&#10003;</span> <strong>100GB</strong> bandwidth/month</li>
+                    <li><span class="feature-check">&#10003;</span> Custom domain</li>
+                    <li><span class="feature-check">&#10003;</span> SSL certificate</li>
+                    <li><span class="feature-check">&#10003;</span> Global CDN</li>
+                    <li class="feature-unavailable"><span class="feature-x">&#10005;</span> Priority support</li>
+                    <li class="feature-unavailable"><span class="feature-x">&#10005;</span> White label</li>
+                </ul>
+                <a href="/#audit" class="cta-button cta-secondary">Get Started</a>
+            </div>
+
+            <!-- Pro Plan (Popular) -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="card-header">
+                    <h2 class="plan-name">Pro</h2>
+                    <p class="plan-description">For growing businesses</p>
+                </div>
+                <div class="card-pricing">
+                    <div class="price-display">
+                        <span class="price monthly-price">$49</span>
+                        <span class="price annual-price" style="display: none;">$490</span>
+                        <span class="price-period monthly-period">/month</span>
+                        <span class="price-period annual-period" style="display: none;">/year</span>
+                    </div>
+                    <p class="migration-note annual-note">
+                        <span class="check">&#10003;</span> FREE migration included
+                    </p>
+                    <p class="migration-note monthly-note" style="display: none;">
+                        + $49 migration fee
+                    </p>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-check">&#10003;</span> <strong>50</strong> pages</li>
+                    <li><span class="feature-check">&#10003;</span> <strong>300</strong> builds/month</li>
+                    <li><span class="feature-check">&#10003;</span> <strong>500GB</strong> bandwidth/month</li>
+                    <li><span class="feature-check">&#10003;</span> Custom domain</li>
+                    <li><span class="feature-check">&#10003;</span> SSL certificate</li>
+                    <li><span class="feature-check">&#10003;</span> Global CDN</li>
+                    <li><span class="feature-check">&#10003;</span> Priority support</li>
+                    <li class="feature-unavailable"><span class="feature-x">&#10005;</span> White label</li>
+                </ul>
+                <a href="/#audit" class="cta-button">Get Started</a>
+            </div>
+
+            <!-- Business Plan -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h2 class="plan-name">Business</h2>
+                    <p class="plan-description">For agencies and large sites</p>
+                </div>
+                <div class="card-pricing">
+                    <div class="price-display">
+                        <span class="price monthly-price">$99</span>
+                        <span class="price annual-price" style="display: none;">$990</span>
+                        <span class="price-period monthly-period">/month</span>
+                        <span class="price-period annual-period" style="display: none;">/year</span>
+                    </div>
+                    <p class="migration-note annual-note">
+                        <span class="check">&#10003;</span> FREE migration included
+                    </p>
+                    <p class="migration-note monthly-note" style="display: none;">
+                        + $49 migration fee
+                    </p>
+                </div>
+                <ul class="plan-features">
+                    <li><span class="feature-check">&#10003;</span> <strong>Unlimited</strong> pages</li>
+                    <li><span class="feature-check">&#10003;</span> <strong>Unlimited</strong> builds</li>
+                    <li><span class="feature-check">&#10003;</span> <strong>Unlimited</strong> bandwidth</li>
+                    <li><span class="feature-check">&#10003;</span> Custom domain</li>
+                    <li><span class="feature-check">&#10003;</span> SSL certificate</li>
+                    <li><span class="feature-check">&#10003;</span> Global CDN</li>
+                    <li><span class="feature-check">&#10003;</span> Priority support</li>
+                    <li><span class="feature-check">&#10003;</span> White label</li>
+                </ul>
+                <a href="/#audit" class="cta-button cta-secondary">Get Started</a>
+            </div>
+        </div>
+
+        <p class="pricing-guarantee">
+            <span class="check">&#10003;</span> 30-day money-back guarantee
+            <span class="guarantee-separator">&#183;</span>
+            <span class="check">&#10003;</span> All sites pass Core Web Vitals or we fix it free
+        </p>
+    </div>
+</section>
+
+<!-- Migration Pricing -->
+<section class="migration-pricing-section">
+    <div class="section-container">
+        <h2 class="section-title">Migration Pricing</h2>
+        <p class="section-subtitle">Simple migration costs. No surprises.</p>
+
+        <div class="migration-grid">
+            <div class="migration-card highlight">
+                <div class="migration-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="migration-title">Annual Plan</h3>
+                <p class="migration-price">FREE</p>
+                <p class="migration-description">Migration included at no extra cost</p>
+            </div>
+
+            <div class="migration-card">
+                <div class="migration-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 8V12M12 16H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="migration-title">Monthly Plan</h3>
+                <p class="migration-price">$49</p>
+                <p class="migration-description">One-time migration fee</p>
+            </div>
+
+            <div class="migration-card">
+                <div class="migration-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="migration-title">Extra Pages</h3>
+                <p class="migration-price">$1/page</p>
+                <p class="migration-description">For pages over your plan limit</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What's Included -->
+<section class="whats-included-section">
+    <div class="section-container">
+        <h2 class="section-title">What's Included</h2>
+        <p class="section-subtitle">Everything you need for blazing-fast hosting</p>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Speed Guarantee</h3>
+                <p class="feature-description">All sites pass Core Web Vitals or we fix it free</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M3.6 9H20.4M3.6 15H20.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 3C14.5 5.5 14.5 18.5 12 21" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 3C9.5 5.5 9.5 18.5 12 21" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Global CDN</h3>
+                <p class="feature-description">Your site served from 200+ locations worldwide</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">SSL Certificate</h3>
+                <p class="feature-description">Free HTTPS with automatic renewal</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 5C4 4.44772 4.44772 4 5 4H19C19.5523 4 20 4.44772 20 5V7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7V5Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 13C4 12.4477 4.44772 12 5 12H19C19.5523 12 20 12.4477 20 13V19C20 19.5523 19.5523 20 19 20H5C4.44772 20 4 19.5523 4 19V13Z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="8" cy="16" r="1" fill="currentColor"/>
+                        <circle cx="8" cy="6" r="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Simple Dashboard</h3>
+                <p class="feature-description">Manage your sites with an intuitive interface</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 4V20M20 4V20M8 12H16M8 8H12M8 16H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Instant Deploys</h3>
+                <p class="feature-description">Push changes live in seconds</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Daily Backups</h3>
+                <p class="feature-description">Automatic backups with one-click restore</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing FAQ -->
+<section class="pricing-faq-section">
+    <div class="section-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>What counts as a "page"?</summary>
+                <p>A page is any unique URL on your site. For example, <code>/about</code>, <code>/contact</code>, and <code>/blog/my-post</code> are each counted as one page. Your homepage (<code>/</code>) counts as one page too.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What happens if I exceed my limits?</summary>
+                <p>We'll notify you before you hit your limits. You can either upgrade to a higher plan or pay a small overage fee. We'll never take your site offline without warning.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What does migration include?</summary>
+                <p>We rebuild your site as optimized static HTML, compress and optimize all images, configure the CDN, set up your custom domain, and deploy everything. The result is a site that loads 7x faster with the same design you have now.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I cancel anytime?</summary>
+                <p>Yes, you can cancel your subscription at any time. There are no contracts or cancellation fees. If you cancel, your site stays live until the end of your billing period.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What if my site doesn't pass Core Web Vitals?</summary>
+                <p>We guarantee all migrated sites pass Google's Core Web Vitals. If yours doesn't, we'll fix it at no extra cost. That's our speed guarantee.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Do you offer refunds?</summary>
+                <p>Yes, we offer a 30-day money-back guarantee. If you're not satisfied with our service for any reason within the first 30 days, we'll refund your payment in full.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I upgrade or downgrade my plan?</summary>
+                <p>Yes, you can change your plan at any time. When upgrading, you'll be charged the prorated difference. When downgrading, the credit will be applied to future invoices.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Do you offer custom or enterprise plans?</summary>
+                <p>Yes! If you have specific requirements or need to host multiple sites, contact us and we'll create a custom plan that fits your needs.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="pricing-cta-section">
+    <div class="section-container">
+        <div class="pricing-cta-content">
+            <h2 class="cta-title">Ready to make your site 7x faster?</h2>
+            <p class="cta-subtitle">Get a free migration analysis. We'll show you exactly how much faster your site can be.</p>
+            <a href="/#audit" class="cta-button cta-button-large">Get Your Free Analysis</a>
+            <p class="cta-note">
+                <span class="check">&#10003;</span> No credit card required
+                <span class="cta-note-separator">&#183;</span>
+                <span class="check">&#10003;</span> Results in 24 hours
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Toggle Script -->
+<script>
+(function() {
+    const toggleButtons = document.querySelectorAll('.toggle-option');
+    const monthlyPrices = document.querySelectorAll('.monthly-price');
+    const annualPrices = document.querySelectorAll('.annual-price');
+    const monthlyPeriods = document.querySelectorAll('.monthly-period');
+    const annualPeriods = document.querySelectorAll('.annual-period');
+    const monthlyNotes = document.querySelectorAll('.monthly-note');
+    const annualNotes = document.querySelectorAll('.annual-note');
+
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const billing = this.getAttribute('data-billing');
+
+            // Update active state
+            toggleButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
+
+            // Toggle prices and notes
+            if (billing === 'monthly') {
+                monthlyPrices.forEach(function(el) { el.style.display = 'inline'; });
+                annualPrices.forEach(function(el) { el.style.display = 'none'; });
+                monthlyPeriods.forEach(function(el) { el.style.display = 'inline'; });
+                annualPeriods.forEach(function(el) { el.style.display = 'none'; });
+                monthlyNotes.forEach(function(el) { el.style.display = 'block'; });
+                annualNotes.forEach(function(el) { el.style.display = 'none'; });
+            } else {
+                monthlyPrices.forEach(function(el) { el.style.display = 'none'; });
+                annualPrices.forEach(function(el) { el.style.display = 'inline'; });
+                monthlyPeriods.forEach(function(el) { el.style.display = 'none'; });
+                annualPeriods.forEach(function(el) { el.style.display = 'inline'; });
+                monthlyNotes.forEach(function(el) { el.style.display = 'none'; });
+                annualNotes.forEach(function(el) { el.style.display = 'block'; });
+            }
+        });
+    });
+})();
+</script>
+{% endblock %}
