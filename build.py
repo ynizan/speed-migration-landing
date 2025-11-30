@@ -17,7 +17,7 @@ from jinja2 import Environment, FileSystemLoader
 SITE_CONFIG = {
     # Core site info
     "site_name": "flows123",
-    "site_url": "https://speed-migration.pages.dev",
+    "site_url": "https://flows123.com",
     "site_description": "Migrate your slow AI-generated website to lightning-fast static hosting. 7x faster loading, better SEO, higher conversions.",
 
     # SEO

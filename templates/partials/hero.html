@@ -28,25 +28,30 @@
             <input type="hidden" name="_subject" value="New Migration Analysis Request" />
             <input type="hidden" name="_next" value="{{ site_url }}/thank-you/" />
 
-            <h3>Get a free migration analysis</h3>
+            <h2 class="audit-form-title">Get a free migration analysis</h2>
             <p class="form-subtitle">We'll analyze your site, show you what's slowing it down, and give you a custom quote to make it 7x faster.</p>
 
             <div class="form-fields">
+                <label for="hero-email" class="visually-hidden">Your email address</label>
                 <input
                     type="email"
                     name="email"
+                    id="hero-email"
                     placeholder="Your email"
                     required
                 />
 
+                <label for="hero-website-url" class="visually-hidden">Your website URL</label>
                 <input
                     type="url"
                     name="website_url"
+                    id="hero-website-url"
                     placeholder="Your website URL (e.g., https://mysite.com)"
                     required
                 />
 
-                <select name="build_tool" required>
+                <label for="hero-build-tool" class="visually-hidden">What tool did you build with?</label>
+                <select name="build_tool" id="hero-build-tool" required>
                     <option value="" disabled selected>What tool did you build with?</option>
                     <option value="bolt">Bolt.new</option>
                     <option value="lovable">Lovable</option>
