@@ -1185,8 +1185,10 @@ a:hover {
     gap: var(--space-xl);
 }
 
-.footer-column h4 {
+.footer-column-title {
+    display: block;
     font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: var(--space-md);
