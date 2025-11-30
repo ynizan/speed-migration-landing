@@ -176,10 +176,64 @@
         return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     }
 
+    // ==========================================================================
+    // PLAUSIBLE ANALYTICS TRACKING
+    // ==========================================================================
+
+    /**
+     * Track custom events in Plausible
+     * @param {string} eventName - Name of the event
+     * @param {object} props - Optional properties
+     */
+    function trackEvent(eventName, props) {
+        if (window.plausible) {
+            window.plausible(eventName, { props: props || {} });
+        }
+    }
+
+    /**
+     * Initialize analytics tracking
+     */
+    function initAnalytics() {
+        // Track form submissions
+        var forms = document.querySelectorAll('.audit-form');
+        forms.forEach(function(form, index) {
+            form.addEventListener('submit', function() {
+                var formLocation = index === 0 ? 'Hero' : 'Footer';
+                trackEvent('Form Submit', { location: formLocation });
+            });
+        });
+
+        // Track PageSpeed link clicks
+        var pagespeedLinks = document.querySelectorAll('a[href*="pagespeed.web.dev"]');
+        pagespeedLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                trackEvent('PageSpeed Click');
+            });
+        });
+
+        // Track scroll depth (25%, 50%, 75%, 100%)
+        var scrollMarks = { 25: false, 50: false, 75: false, 100: false };
+
+        window.addEventListener('scroll', function() {
+            var scrollPercent = Math.round(
+                (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+            );
+
+            [25, 50, 75, 100].forEach(function(mark) {
+                if (scrollPercent >= mark && !scrollMarks[mark]) {
+                    scrollMarks[mark] = true;
+                    trackEvent('Scroll Depth', { depth: mark + '%' });
+                }
+            });
+        });
+    }
+
     // Initialize
     document.addEventListener('DOMContentLoaded', function() {
         initForms();
         initSmoothScroll();
+        initAnalytics();
 
         if (!prefersReducedMotion()) {
             initSpeedDemo();
