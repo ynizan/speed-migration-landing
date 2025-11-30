@@ -560,6 +560,72 @@ summary:focus-visible {
     color: var(--color-text-light);
 }
 
+/* ==========================================================================
+   Form Footer - Unified trust badges and links below CTA button
+   ========================================================================== */
+
+.form-footer {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+/* Trust badges row */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+}
+
+.trust-badge .checkmark {
+    color: var(--color-good);
+    flex-shrink: 0;
+}
+
+/* Divider */
+.form-divider {
+    border: none;
+    border-top: 1px solid var(--color-gray-300);
+    margin: var(--space-lg) auto;
+    max-width: 280px;
+}
+
+/* Helper text (sample report) */
+.form-helper {
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    margin: 0 0 var(--space-md) 0;
+}
+
+/* Pricing info */
+.form-pricing {
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    margin: 0 0 var(--space-xs) 0;
+}
+
+.form-pricing strong {
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+/* Responsive: Stack trust badges on mobile */
+@media (max-width: 480px) {
+    .trust-badges {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+}
+
 /* Legacy form elements (keep for compatibility) */
 .form-group {
     display: flex;
