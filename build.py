@@ -6,9 +6,19 @@ Generates optimized static HTML from Jinja2 templates.
 
 import os
 import shutil
+import hashlib
 from datetime import datetime
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
+
+
+def get_css_version():
+    """Generate a short hash of the CSS file for cache busting."""
+    css_path = Path("static/css/styles.css")
+    if css_path.exists():
+        content = css_path.read_bytes()
+        return hashlib.md5(content).hexdigest()[:8]
+    return datetime.now().strftime("%Y%m%d%H%M")
 
 # =============================================================================
 # CONFIGURATION
@@ -32,6 +42,9 @@ SITE_CONFIG = {
     # Build info
     "build_date": datetime.now().isoformat(),
     "year": datetime.now().year,
+
+    # Cache busting version for CSS
+    "css_version": get_css_version(),
 }
 
 # Pages to build: (template_path, output_path, page_specific_config)
