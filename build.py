@@ -80,6 +80,17 @@ PAGES = [
             "changefreq": "monthly",
         }
     },
+    {
+        "template": "pages/case-studies.html",
+        "output": "case-studies/index.html",
+        "config": {
+            "title": "Case Studies: The Real Cost of Slow Websites | Flows123",
+            "description": "See how slow websites cost businesses 20-50% of their traffic and revenue. Real case studies with data from Google, SISTRIX, and companies who fixed their speed problems.",
+            "canonical": "/case-studies/",
+            "priority": "0.7",
+            "changefreq": "monthly",
+        }
+    },
 ]
 
 # Speed comparison data (used in templates)
