@@ -2976,6 +2976,156 @@ summary:focus-visible {
 }
 
 /* -----------------------------------------------------------------------------
+   Founders Proof Section (Homepage)
+   ----------------------------------------------------------------------------- */
+.founders-proof {
+    padding: var(--space-3xl) var(--space-md);
+    background: var(--color-gray-100);
+}
+
+.founders-proof-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin-bottom: var(--space-2xl);
+    letter-spacing: -0.02em;
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .founders-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.founder-proof-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.founders-proof .founder-header {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: var(--space-lg);
+}
+
+.founders-proof .founder-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.founders-proof .founder-name-link {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--color-black);
+    text-decoration: none;
+    display: block;
+}
+
+.founders-proof .founder-name-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.founders-proof .founder-title {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+}
+
+.founder-quote {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-gray-700);
+    margin: 0 0 var(--space-lg) 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+}
+
+.founder-metrics {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--space-lg);
+}
+
+.founder-metric {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    background: var(--color-gray-100);
+}
+
+.founder-metric-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-500);
+    margin-bottom: 0.25rem;
+}
+
+.founder-metric-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.founder-metric-value-bad {
+    color: var(--color-bad);
+}
+
+.founder-metric-value-good {
+    color: var(--color-good);
+}
+
+.founder-metric-score {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+}
+
+.founder-metric-arrow {
+    color: var(--color-gray-500);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.founder-link:hover {
+    text-decoration: underline;
+}
+
+.founder-link svg {
+    flex-shrink: 0;
+}
+
+/* -----------------------------------------------------------------------------
    Reduced Motion
    ----------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
