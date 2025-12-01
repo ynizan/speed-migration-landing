@@ -3020,24 +3020,25 @@ summary:focus-visible {
     margin-bottom: var(--space-lg);
 }
 
-.founders-proof .founder-avatar {
+.founders-proof .founder-avatar-img {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--color-primary);
-    color: var(--color-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 0.875rem;
+    object-fit: cover;
     flex-shrink: 0;
 }
 
-.founders-proof .founder-name {
+.founders-proof .founder-name-link {
     font-weight: 800;
     font-size: 1rem;
     color: var(--color-black);
+    text-decoration: none;
+    display: block;
+}
+
+.founders-proof .founder-name-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 .founders-proof .founder-title {
