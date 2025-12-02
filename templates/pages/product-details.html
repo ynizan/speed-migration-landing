@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="page-header">
+  <div class="section-container">
+    <h1>How we make your site 7x faster</h1>
+    <p>A technical breakdown of what changes when we optimize your vibe-coded website</p>
+  </div>
+</section>
+
+<section class="optimization-table">
+  <div class="section-container">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th class="col-before">Typical Vibe-Coded Site</th>
+          <th class="col-after">After Flows123 Optimization</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Rendering</strong></td>
+          <td class="cell-bad">Server-side rendering (SSR) &mdash; browser waits for server</td>
+          <td class="cell-good">Static pages &mdash; pre-built, instant delivery from CDN</td>
+        </tr>
+        <tr>
+          <td><strong>JavaScript</strong></td>
+          <td class="cell-bad">2-5MB of React/framework code loaded upfront</td>
+          <td class="cell-good">Minimal JS, only what's needed, loaded async</td>
+        </tr>
+        <tr>
+          <td><strong>Images</strong></td>
+          <td class="cell-bad">Full-size JPEGs/PNGs, not optimized</td>
+          <td class="cell-good">WebP format, properly sized, lazy-loaded</td>
+        </tr>
+        <tr>
+          <td><strong>Illustrations</strong></td>
+          <td class="cell-bad">Raster images (PNG/JPEG)</td>
+          <td class="cell-good">SVG vectors &mdash; crisp at any size, tiny file size</td>
+        </tr>
+        <tr>
+          <td><strong>CSS</strong></td>
+          <td class="cell-bad">Large CSS bundles, unused styles included</td>
+          <td class="cell-good">Critical CSS inlined, rest loaded async</td>
+        </tr>
+        <tr>
+          <td><strong>Fonts</strong></td>
+          <td class="cell-bad">Multiple font files, render-blocking</td>
+          <td class="cell-good">font-display: swap, subset fonts, preconnect</td>
+        </tr>
+        <tr>
+          <td><strong>Hosting</strong></td>
+          <td class="cell-bad">Single server location</td>
+          <td class="cell-good">Global CDN &mdash; served from nearest edge location</td>
+        </tr>
+        <tr>
+          <td><strong>SEO Files</strong></td>
+          <td class="cell-bad">No sitemap.xml or robots.txt</td>
+          <td class="cell-good">Auto-generated sitemap and robots.txt</td>
+        </tr>
+        <tr>
+          <td><strong>Meta Tags</strong></td>
+          <td class="cell-bad">Missing or generic meta descriptions</td>
+          <td class="cell-good">Optimized titles, descriptions, Open Graph tags</td>
+        </tr>
+        <tr>
+          <td><strong>Core Web Vitals</strong></td>
+          <td class="cell-bad">LCP: 10-20s, Score: 20-40</td>
+          <td class="cell-good">LCP: &lt;3s, Score: 95+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="section-container">
+    <h2>Ready to see what we can do for your site?</h2>
+    <a href="/#audit" class="cta-button">Get Your Free Speed Analysis</a>
+    <p class="cta-note">No sales call needed</p>
+  </div>
+</section>
+{% endblock %}

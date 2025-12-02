@@ -3126,6 +3126,345 @@ summary:focus-visible {
 }
 
 /* -----------------------------------------------------------------------------
+   Builder Comparison Section
+   ----------------------------------------------------------------------------- */
+.builder-comparison {
+    padding: var(--space-3xl) var(--space-lg);
+    background: var(--color-white);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Chat Demo Container */
+.chat-demo {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Header (macOS-style window bar) */
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-gray-100);
+    border-bottom: 1px solid var(--color-gray-300);
+}
+
+.chat-header-slow {
+    background: #FEF2F2;
+    border-bottom-color: #FECACA;
+}
+
+.chat-header-fast {
+    background: #F0FDF4;
+    border-bottom-color: #BBF7D0;
+}
+
+.chat-header-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-gray-300);
+}
+
+.chat-header-slow .chat-header-dot:nth-child(1) { background: #FCA5A5; }
+.chat-header-slow .chat-header-dot:nth-child(2) { background: #FCD34D; }
+.chat-header-slow .chat-header-dot:nth-child(3) { background: var(--color-gray-300); }
+
+.chat-header-fast .chat-header-dot:nth-child(1) { background: #86EFAC; }
+.chat-header-fast .chat-header-dot:nth-child(2) { background: #86EFAC; }
+.chat-header-fast .chat-header-dot:nth-child(3) { background: #86EFAC; }
+
+.chat-header-title {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Chat Body */
+.chat-body {
+    padding: 1rem;
+    background: #FAFAFA;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-height: 320px;
+}
+
+.chat-demo-slow .chat-body {
+    background: #FFFBFB;
+}
+
+.chat-demo-fast .chat-body {
+    background: #FAFFFE;
+}
+
+/* Chat Messages */
+.chat-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message-user {
+    align-items: flex-end;
+}
+
+.chat-message-bot {
+    align-items: flex-start;
+}
+
+.chat-bubble {
+    max-width: 85%;
+    padding: 0.625rem 0.875rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+.chat-message-user .chat-bubble {
+    background: var(--color-primary);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-message-bot .chat-bubble {
+    background: white;
+    color: var(--color-gray-700);
+    border: 1px solid var(--color-gray-300);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble-slow {
+    background: #FEF2F2 !important;
+    border-color: #FECACA !important;
+    color: #991B1B !important;
+}
+
+.chat-bubble-fast {
+    background: #F0FDF4 !important;
+    border-color: #BBF7D0 !important;
+    color: #166534 !important;
+}
+
+.chat-attachment {
+    font-size: 0.6875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+/* Auto Badge */
+.chat-auto-badge {
+    display: inline-block;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #16A34A;
+    color: white;
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    margin-right: 0.375rem;
+    vertical-align: middle;
+}
+
+/* Chat Result Footer */
+.chat-result {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.chat-result-slow {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.chat-result-fast {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+.chat-result-score,
+.chat-result-time {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Comparison Note / Link */
+.comparison-note {
+    text-align: center;
+    margin-top: var(--space-xl);
+    font-size: 0.875rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Product Details Page
+   ----------------------------------------------------------------------------- */
+.page-header {
+    padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+    text-align: center;
+    background: var(--color-gray-100);
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.page-header p {
+    color: var(--color-gray-500);
+}
+
+.optimization-table {
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.comparison-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-gray-300);
+}
+
+.comparison-table th {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-500);
+}
+
+.comparison-table .col-before {
+    background: #FEF2F2;
+    color: #991B1B;
+}
+
+.comparison-table .col-after {
+    background: #F0FDF4;
+    color: #166534;
+}
+
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: var(--color-black);
+    width: 20%;
+}
+
+.cell-bad {
+    background: #FFFBFB;
+}
+
+.cell-good {
+    background: #FAFFFE;
+}
+
+/* Mobile: Stack table */
+@media (max-width: 640px) {
+    .comparison-table,
+    .comparison-table tbody,
+    .comparison-table tr,
+    .comparison-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid var(--color-gray-300);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    .comparison-table td {
+        border-bottom: 1px solid var(--color-gray-300);
+    }
+
+    .comparison-table td:first-child {
+        background: var(--color-gray-100);
+        font-weight: 700;
+    }
+
+    .comparison-table td:nth-child(2)::before {
+        content: "Before: ";
+        font-weight: 600;
+        color: #991B1B;
+    }
+
+    .comparison-table td:nth-child(3)::before {
+        content: "After: ";
+        font-weight: 600;
+        color: #166534;
+    }
+}
+
+/* CTA Section on Product Details */
+.cta-section {
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+    background: var(--color-primary);
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-lg);
+}
+
+.cta-section .cta-button {
+    background: white;
+    color: var(--color-primary);
+}
+
+.cta-section .cta-button:hover {
+    background: var(--color-gray-100);
+}
+
+.cta-section .cta-note {
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    color: white;
+}
+
+/* -----------------------------------------------------------------------------
    Reduced Motion
    ----------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {

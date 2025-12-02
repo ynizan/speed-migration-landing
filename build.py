@@ -137,6 +137,17 @@ PAGES = [
             "changefreq": "monthly",
         }
     },
+    {
+        "template": "pages/product-details.html",
+        "output": "product-details/index.html",
+        "config": {
+            "title": "How We Optimize Your Website | Flows123",
+            "description": "A technical breakdown of how we make vibe-coded websites 7x faster. See the differences in rendering, JavaScript, images, and more.",
+            "canonical": "/product-details/",
+            "priority": "0.6",
+            "changefreq": "monthly",
+        }
+    },
 ]
 
 # Speed comparison data (used in templates)
